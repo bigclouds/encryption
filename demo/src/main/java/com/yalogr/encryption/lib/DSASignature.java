@@ -24,7 +24,8 @@ public class DSASignature {
      * </code>  
      **/  
     public static final String KEY_ALGORITHM = "DSA";   
-    public static final String SIGNATURE_ALGORITHM = "DSA";   
+    public static final String SIGNATURE_ALGORITHM = "DSA";
+    public static final String SIGNATURE_ALGORITHM1 = "SHA1withDSA";
   
     /**  
      * 默认种子  
@@ -58,7 +59,7 @@ public class DSASignature {
 	        PrivateKey priKey = keyFactory.generatePrivate(pkcs8KeySpec);   
 	  
 	        // 用私钥对信息生成数字签名   
-	        Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);   
+	        Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM1);
 	        signature.initSign(priKey);   
 	        signature.update(data);   
 	  

@@ -20,7 +20,7 @@ public class TestDSASignature {
 
 		// 产生签名 
 		String sign = DSASignature.sign(data, privateKey); 
-		System.out.println("签名:" + sign); 
+		System.out.println(inputStr +" 签名:" + sign); 
 
 		// 验证签名 
 		boolean status = DSASignature.verify(data, publicKey, sign); 
